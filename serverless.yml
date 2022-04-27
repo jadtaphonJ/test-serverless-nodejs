@@ -1,0 +1,14 @@
+org: jadtaphon
+app: test-serverless-node
+service: test-serverless-node
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+
+functions:
+  api:
+    handler: handler.handler
+    events:
+      - httpApi: '*'
